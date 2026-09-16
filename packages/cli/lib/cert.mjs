@@ -49,6 +49,8 @@ export function readCertFromFile(filePath) {
   return pem;
 }
 
+const MAX_CERT_BYTES = 64 * 1024;
+
 export async function fetchCertFromUrl(url) {
   let parsed;
   try {
@@ -56,8 +58,8 @@ export async function fetchCertFromUrl(url) {
   } catch {
     throw new Error(`Invalid URL: ${url}`);
   }
-  if (!['http:', 'https:'].includes(parsed.protocol)) {
-    throw new Error('Only http/https URLs are supported');
+  if (parsed.protocol !== 'https:') {
+    throw new Error('Only https:// URLs are supported');
   }
 
   const res = await fetch(url, {
@@ -65,11 +67,24 @@ export async function fetchCertFromUrl(url) {
     redirect: 'follow',
   });
 
+  const finalUrl = res.url || url;
+  if (!finalUrl.startsWith('https:')) {
+    throw new Error('Redirect left HTTPS; refusing to fetch certificate');
+  }
+
   if (!res.ok) {
     throw new Error(`Failed to fetch certificate (${res.status}) from ${url}`);
   }
 
+  const declared = Number(res.headers.get('content-length') || 0);
+  if (declared > MAX_CERT_BYTES) {
+    throw new Error('Certificate response is too large');
+  }
+
   const raw = await res.text();
+  if (raw.length > MAX_CERT_BYTES) {
+    throw new Error('Certificate response is too large');
+  }
   const pem = normalizePem(raw);
   if (!pem) {
     throw new Error(`URL did not return a PEM certificate: ${url}`);

@@ -114,9 +114,7 @@ export async function validateCertificate({ token, countries, pem }) {
     `HTTP ${res.status}`;
 
   if (res.status === 500) {
-    errMsg =
-      'V5 backend error — trial/API tokens may be missing from SUBSCRIBERS_KV. ' +
-      'CLI calls POST api.tppvalidation.com/v5 (not /v4).';
+    errMsg = 'Validator returned HTTP 500. Retry in a moment, or check https://tppv.dev';
   }
 
   return {

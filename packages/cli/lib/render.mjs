@@ -182,6 +182,6 @@ ${pc.bold('Examples')}
   tppv integration --list
   tppv integration --gateway kong --out ./gateway --roles PSP_AI,PSP_PI
   tppv trial --email dev@bank.com
-  tppv config token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
+  tppv config token <jwt>
 `);
 }

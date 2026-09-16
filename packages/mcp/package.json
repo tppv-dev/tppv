@@ -33,6 +33,9 @@
     "qsealc"
   ],
   "license": "Apache-2.0",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "start": "node src/index.mjs"
   }

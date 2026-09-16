@@ -1,6 +1,13 @@
 import { apiV5, auditBase } from './config.mjs';
 
+const MAX_PEM_CHARS = 64 * 1024;
+const MAX_SEARCH_NAME = 200;
+const MAX_LEI = 32;
+
 export async function validateCertificate(token, countries, pem) {
+  if (String(pem).length > MAX_PEM_CHARS) {
+    throw new Error('Certificate PEM is too large');
+  }
   const url = new URL(apiV5());
   url.searchParams.set('cc', countries);
   url.searchParams.set('details', 'true');
@@ -66,6 +73,15 @@ function ebaProp(props, key) {
 export async function searchEntity(register, { name, country, lei }) {
   if (!name && !lei) {
     return { ok: false, error: 'Provide name or lei' };
+  }
+  if (name && name.length > MAX_SEARCH_NAME) {
+    return { ok: false, error: 'Name is too long' };
+  }
+  if (lei && lei.length > MAX_LEI) {
+    return { ok: false, error: 'LEI is too long' };
+  }
+  if (country && !/^[A-Za-z]{2}$/.test(country)) {
+    return { ok: false, error: 'Country must be a two-letter code' };
   }
 
   const searchUrl = `https://euclid.eba.europa.eu/register/api/search/entities?t=${Date.now()}`;
