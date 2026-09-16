@@ -17,11 +17,11 @@ jobs:
           node-version: 22
           registry-url: https://registry.npmjs.org
       - run: npm ci
-      - name: Publish @tppv/cli
-        run: npm publish -w @tppv/cli --access public
+      - name: Publish @tppv-dev/cli
+        run: npm publish -w @tppv-dev/cli --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-      - name: Publish @tppv/mcp
-        run: npm publish -w @tppv/mcp --access public
+      - name: Publish @tppv-dev/mcp
+        run: npm publish -w @tppv-dev/mcp --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

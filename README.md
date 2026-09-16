@@ -9,7 +9,7 @@ Apache-2.0.
 ## Install
 
 ```bash
-npm install -g @tppv/cli @tppv/mcp
+npm install -g @tppv-dev/cli @tppv-dev/mcp
 ```
 
 or without npm global:
@@ -55,7 +55,7 @@ Token from `TPPV_TOKEN` or the CLI config file.
   "mcpServers": {
     "tppv": {
       "command": "npx",
-      "args": ["-y", "@tppv/mcp"],
+      "args": ["-y", "@tppv-dev/mcp"],
       "env": {
         "TPPV_TOKEN": "your-jwt"
       }
@@ -70,8 +70,8 @@ Hosted alternative (no local process): `https://ai.tppvalidation.com/mcp`.
 
 | Package | What |
 | ------- | ---- |
-| [`@tppv/cli`](packages/cli) | `tppv` command |
-| [`@tppv/mcp`](packages/mcp) | stdio MCP server |
+| [`@tppv-dev/cli`](packages/cli) | `tppv` command |
+| [`@tppv-dev/mcp`](packages/mcp) | stdio MCP server |
 
 ## Not in this repo
 

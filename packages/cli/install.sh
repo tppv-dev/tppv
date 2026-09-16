@@ -22,10 +22,10 @@ if [ "$NODE_MAJOR" -lt 18 ]; then
   exit 1
 fi
 
-echo "→ Installing @tppv/cli"
-if ! npm install -g @tppv/cli; then
-  echo "error: npm install -g @tppv/cli failed" >&2
-  echo "  From a local clone: npm install && npm exec -w @tppv/cli tppv -- --help" >&2
+echo "→ Installing @tppv-dev/cli"
+if ! npm install -g @tppv-dev/cli; then
+  echo "error: npm install -g @tppv-dev/cli failed" >&2
+  echo "  From a local clone: npm install && npm exec -w @tppv-dev/cli tppv -- --help" >&2
   exit 1
 fi
 

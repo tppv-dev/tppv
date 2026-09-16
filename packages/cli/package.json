@@ -1,5 +1,5 @@
 {
-  "name": "@tppv/cli",
+  "name": "@tppv-dev/cli",
   "version": "0.1.0",
   "description": "Validate eIDAS/PSD2 TPP certificates from the terminal",
   "type": "module",

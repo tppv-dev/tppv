@@ -16,7 +16,7 @@
     "node": ">=18"
   },
   "scripts": {
-    "tppv": "npm exec -w @tppv/cli -- tppv",
-    "mcp": "npm exec -w @tppv/mcp -- tppv-mcp"
+    "tppv": "npm exec -w @tppv-dev/cli -- tppv",
+    "mcp": "npm exec -w @tppv-dev/mcp -- tppv-mcp"
   }
 }

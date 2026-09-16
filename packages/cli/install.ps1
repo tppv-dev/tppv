@@ -18,10 +18,10 @@ if ($nodeMajor -lt 18) {
   Write-Error "Node.js 18+ required (found $(node -v))"
 }
 
-Write-Host "-> Installing @tppv/cli"
-npm install -g @tppv/cli
+Write-Host "-> Installing @tppv-dev/cli"
+npm install -g @tppv-dev/cli
 if ($LASTEXITCODE -ne 0) {
-  Write-Error "npm install -g @tppv/cli failed"
+  Write-Error "npm install -g @tppv-dev/cli failed"
 }
 
 Write-Host ""

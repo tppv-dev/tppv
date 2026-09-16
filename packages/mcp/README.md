@@ -1,7 +1,7 @@
-# @tppv/mcp
+# @tppv-dev/mcp
 
 Local stdio MCP server. See the [root README](../../README.md).
 
 ```bash
-npx @tppv/mcp
+npx @tppv-dev/mcp
 ```

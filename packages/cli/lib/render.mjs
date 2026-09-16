@@ -172,7 +172,7 @@ ${pc.bold('Integration options')}
   --force                      Overwrite existing files
 
 ${pc.bold('Install')}
-  npm:          npm install -g @tppv/cli
+  npm:          npm install -g @tppv-dev/cli
   macOS/Linux:  curl -fsSL https://tppv.dev/cli/install.sh | bash
   Windows:      irm https://tppv.dev/cli/install.ps1 | iex
 

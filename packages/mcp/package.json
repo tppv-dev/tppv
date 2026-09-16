@@ -1,5 +1,5 @@
 {
-  "name": "@tppv/mcp",
+  "name": "@tppv-dev/mcp",
   "version": "0.1.0",
   "description": "Local MCP server for TPP Validation — validate, audit, search",
   "type": "module",
