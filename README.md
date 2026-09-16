@@ -1,6 +1,6 @@
 # tppv
 
-Open-source **CLI** and **MCP server** for [TPP Validation](https://tppv.dev).
+Open-source **CLI** and **MCP server** for [TPP Validation](https://tppv.dev). Source: [github.com/tppv-dev/tppv](https://github.com/tppv-dev/tppv).
 
 They talk to the hosted API (`api.tppvalidation.com/v5`). The validation engine itself stays a service — these packages are how you call it from a terminal or an agent.
 

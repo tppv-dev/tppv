@@ -17,12 +17,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tppv/tppv.git",
+    "url": "git+https://github.com/tppv-dev/tppv.git",
     "directory": "packages/cli"
   },
   "homepage": "https://tppv.dev",
   "bugs": {
-    "url": "https://github.com/tppv/tppv/issues"
+    "url": "https://github.com/tppv-dev/tppv/issues"
   },
   "dependencies": {
     "@clack/prompts": "^0.10.1",

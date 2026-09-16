@@ -2,7 +2,7 @@
 # tppv CLI — one-line installer (macOS / Linux / WSL / Git Bash)
 #
 #   curl -fsSL https://tppv.dev/cli/install.sh | bash
-#   curl -fsSL https://raw.githubusercontent.com/tppv/tppv/main/packages/cli/install.sh | bash
+#   curl -fsSL https://raw.githubusercontent.com/tppv-dev/tppv/main/packages/cli/install.sh | bash
 #
 set -euo pipefail
 

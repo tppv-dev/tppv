@@ -14,12 +14,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tppv/tppv.git",
+    "url": "git+https://github.com/tppv-dev/tppv.git",
     "directory": "packages/mcp"
   },
   "homepage": "https://tppv.dev",
   "bugs": {
-    "url": "https://github.com/tppv/tppv/issues"
+    "url": "https://github.com/tppv-dev/tppv/issues"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.25.2",

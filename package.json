@@ -6,7 +6,7 @@
   "homepage": "https://tppv.dev",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tppv/tppv.git"
+    "url": "git+https://github.com/tppv-dev/tppv.git"
   },
   "workspaces": [
     "packages/cli",
