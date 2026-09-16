@@ -4,7 +4,7 @@
   "description": "Validate eIDAS/PSD2 TPP certificates from the terminal",
   "type": "module",
   "bin": {
-    "tppv": "./bin/tpp.mjs"
+    "tppv": "./bin/tppv.js"
   },
   "engines": {
     "node": ">=18"
