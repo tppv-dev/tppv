@@ -1,0 +1,22 @@
+{
+  "name": "tppv",
+  "private": true,
+  "description": "Open-source CLI and MCP server for TPP Validation",
+  "license": "Apache-2.0",
+  "homepage": "https://tppv.dev",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tppv/tppv.git"
+  },
+  "workspaces": [
+    "packages/cli",
+    "packages/mcp"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "tppv": "npm exec -w @tppv/cli -- tppv",
+    "mcp": "npm exec -w @tppv/mcp -- tppv-mcp"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "name": "@tppv/mcp",
+  "version": "0.1.0",
+  "description": "Local MCP server for TPP Validation — validate, audit, search",
+  "type": "module",
+  "bin": {
+    "tppv-mcp": "./src/index.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "files": [
+    "src"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tppv/tppv.git",
+    "directory": "packages/mcp"
+  },
+  "homepage": "https://tppv.dev",
+  "bugs": {
+    "url": "https://github.com/tppv/tppv/issues"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.25.2",
+    "zod": "^3.24.2"
+  },
+  "keywords": [
+    "mcp",
+    "tpp",
+    "psd2",
+    "eidas",
+    "qsealc"
+  ],
+  "license": "Apache-2.0",
+  "scripts": {
+    "start": "node src/index.mjs"
+  }
+}

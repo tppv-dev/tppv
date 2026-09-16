@@ -1,0 +1,43 @@
+{
+  "name": "@tppv/cli",
+  "version": "0.1.0",
+  "description": "Validate eIDAS/PSD2 TPP certificates from the terminal",
+  "type": "module",
+  "bin": {
+    "tppv": "./bin/tpp.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "files": [
+    "bin",
+    "lib",
+    "install.sh",
+    "install.ps1"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tppv/tppv.git",
+    "directory": "packages/cli"
+  },
+  "homepage": "https://tppv.dev",
+  "bugs": {
+    "url": "https://github.com/tppv/tppv/issues"
+  },
+  "dependencies": {
+    "@clack/prompts": "^0.10.1",
+    "picocolors": "^1.1.1"
+  },
+  "keywords": [
+    "tpp",
+    "psd2",
+    "eidas",
+    "qsealc",
+    "validation",
+    "cli"
+  ],
+  "license": "Apache-2.0",
+  "scripts": {
+    "start": "node bin/tpp.mjs"
+  }
+}
