@@ -5,12 +5,15 @@ on:
     types: [published]
   workflow_dispatch:
 
-# Trusted Publishing (OIDC) — no npm token.
-# Configure each package on npmjs.com → Settings → Trusted Publisher:
+# Trusted Publishing + staged publish only.
+# On npmjs.com leave "npm publish" UNCHECKED (stage only).
+# After CI: npmjs.com → Staged Packages → Approve (2FA).
+#
+# Trusted Publisher fields:
 #   Organization: tppv-dev
 #   Repository:   tppv
 #   Workflow:     publish.yml
-#   Allow action: npm publish  (not only npm stage publish)
+#   Environment:  (empty)
 permissions:
   id-token: write
   contents: read
@@ -26,7 +29,9 @@ jobs:
           registry-url: https://registry.npmjs.org
           package-manager-cache: false
       - run: npm ci
-      - name: Publish @tppv-dev/cli
-        run: npm publish -w @tppv-dev/cli --access public
-      - name: Publish @tppv-dev/mcp
-        run: npm publish -w @tppv-dev/mcp --access public
+      - name: Stage @tppv-dev/cli
+        working-directory: packages/cli
+        run: npm stage publish --access public
+      - name: Stage @tppv-dev/mcp
+        working-directory: packages/mcp
+        run: npm stage publish --access public
