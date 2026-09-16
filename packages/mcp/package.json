@@ -4,13 +4,13 @@
   "description": "Local MCP server for TPP Validation — validate, audit, search",
   "type": "module",
   "bin": {
-    "tppv-mcp": "./bin/tppv-mcp.js"
+    "tppv-mcp": "tppv-mcp.js"
   },
   "engines": {
     "node": ">=18"
   },
   "files": [
-    "bin",
+    "tppv-mcp.js",
     "src"
   ],
   "repository": {

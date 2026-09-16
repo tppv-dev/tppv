@@ -4,12 +4,13 @@
   "description": "Validate eIDAS/PSD2 TPP certificates from the terminal",
   "type": "module",
   "bin": {
-    "tppv": "./bin/tppv.js"
+    "tppv": "tppv.js"
   },
   "engines": {
     "node": ">=18"
   },
   "files": [
+    "tppv.js",
     "bin",
     "lib",
     "install.sh",
